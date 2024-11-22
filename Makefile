@@ -1,8 +1,8 @@
 KDIR := /usr/src/kernels/$(shell uname -r)
 PWD := $(shell pwd)
 SRC := $(wildcard src/*.c)
-obj-m := sc_log.o
-sc_log-objs := src/main.o src/entry.o
+obj-m := modulename.o
+modulename-objs := $(SRC:.c=.o)
 ccflags-y += -I$(PWD)/include
 CC := gcc
 
